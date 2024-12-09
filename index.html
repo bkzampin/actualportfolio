@@ -19,7 +19,19 @@
             position: absolute; /* Position absolute to place it relative to the body */
             top: 100px; /* 100px down from the top */
             left: 100px; /* 100px right from the left */
+            padding: 20px; /* Padding inside the rectangle */
+            box-sizing: border-box; /* Include padding in width/height */
         }
+
+.text-column {
+    color: #dbdddc; /* Text color */
+    font-size: 25px; /* Font size */
+    line-height: 2; /* Line height for readability */
+    width: 400px; /* Set width to 400px */
+    max-height: 80%; /* Relative height; adjust as needed */
+    overflow-y: auto; /* Allow scrolling if the content exceeds max-height */
+    margin-top: 550px; /* Move the text column down by 400px */
+}
 
         /* Styles for the main image */
         .story-image {
@@ -43,8 +55,14 @@
 </head>
 <body>
 
-    <div class="rectangle"></div> <!-- Rectangle element -->
-    <img class="story-image" src="1.story.png" alt="Story Image"> <!-- Main Image -->
+    <div class="rectangle"> <!-- Rectangle element -->
+        <div class="text-column">
+            <p>I chose to present this story as sketchbook entries because it reflects my passion for art; creating it as a visual sketchbook-diary adds a personal, meaningful touch to the story I’m sharing. It begins in 2010, when I was 5 - fast-forwards to the present day as I navigate school, facing challenges of self-doubt and creative block. By the end of the story, I had rediscovered my passion for art and learned to appreciate the process of creation itself, rather than focusing solely on the result. All illustrations were hand-drawn in Procreate. For some sections, I used Firefly for reference photos. I used them to create my own drawings in my style!
+</p>
+        </div>
+    </div>
+    
+    <img class="story-image" src="1.story1.png" alt="Story Image"> <!-- Main Image -->
     <img class="overlapping-image" src="storyimage.png" alt="Overlapping Image"> <!-- Overlapping Image -->
 
 </body>
