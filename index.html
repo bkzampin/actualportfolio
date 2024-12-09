@@ -21,20 +21,22 @@
             left: 100px; /* 100px right from the left */
         }
 
-        img {
-            width: 1000px; /* Image width */
-            height: auto; /* Maintain aspect ratio */
-            position: absolute; /* Position absolute to place it relative to the body */
-            top: 100px; /* 100px down from the top */
-            left: 100px; /* 100px right from the left */
-        }
-
-        .overlapping-image {
-            width: 300px; /* Width of the overlapping image */
+        /* Styles for the main image */
+        .story-image {
+            width: 1000px; /* Adjust the width as needed */
             height: auto; /* Maintain aspect ratio */
             position: absolute; /* Position absolute */
-            top: 20px; /* 20px from the top */
-            right: 20px; /* 20px from the right */
+            top: 100px; /* Adjust down from the top */
+            left: 100px; /* Adjust right from the left */
+        }
+
+        /* Styles for the overlapping image */
+        .overlapping-image {
+            width: 1000px; /* Adjust width here */
+            height: auto; /* Maintain aspect ratio */
+            position: absolute; /* Position absolute */
+            top: 700px; /* Adjust down from the top */
+            right: 20px; /* Adjust from the right */
             z-index: 10; /* Higher z-index to ensure it overlaps */
         }
     </style>
@@ -42,8 +44,8 @@
 <body>
 
     <div class="rectangle"></div> <!-- Rectangle element -->
-    <img src="1.story.png" alt="Story Image"> <!-- Image element -->
-    <img class="overlapping-image" src="overlap-image.png" alt="Overlapping Image"> <!-- Overlapping Image -->
+    <img class="story-image" src="1.story.png" alt="Story Image"> <!-- Main Image -->
+    <img class="overlapping-image" src="storyimage.png" alt="Overlapping Image"> <!-- Overlapping Image -->
 
 </body>
 </html>
