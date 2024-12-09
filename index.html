@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rectangle and Image Example</title>
+    <link rel="stylesheet" href="https://use.typekit.net/yzp7rlf.css"> <!-- Add the Typekit font link -->
     <style>
         body {
             background-color: #224159; /* Background color */
@@ -23,15 +24,20 @@
             box-sizing: border-box; /* Include padding in width/height */
         }
 
-.text-column {
-    color: #dbdddc; /* Text color */
-    font-size: 25px; /* Font size */
-    line-height: 2; /* Line height for readability */
-    width: 400px; /* Set width to 400px */
-    max-height: 80%; /* Relative height; adjust as needed */
-    overflow-y: auto; /* Allow scrolling if the content exceeds max-height */
-    margin-top: 550px; /* Move the text column down by 400px */
-}
+        /* Styles for the text column */
+        .text-column {
+            color: #dbdddc; /* Text color */
+            font-size: 25px; /* Font size */
+            line-height: 2.5; /* Line height for readability */
+            width: 400px; /* Set width to 400px */
+            max-height: 80%; /* Relative height; adjust as needed */
+            overflow-y: auto; /* Allow scrolling if the content exceeds max-height */
+           margin-left: 50px;
+            margin-top: 500px; /* Move the text column down by 400px */
+            font-family: "komet", sans-serif; /* Apply the Komet font */
+            font-weight: 400; /* Set font weight */
+            font-style: normal; /* Set font style */
+        }
 
         /* Styles for the main image */
         .story-image {
