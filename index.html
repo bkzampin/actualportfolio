@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rectangle Example</title>
+    <title>Rectangle and Image Example</title>
     <style>
         body {
             background-color: #224159; /* Background color */
             margin: 0; /* Remove default margin */
             height: 100vh; /* Full viewport height */
-            position: relative; /* Position relative for absolute positioning of the rectangle */
+            position: relative; /* Position relative for absolute positioning of children */
         }
 
         .rectangle {
@@ -20,11 +20,20 @@
             top: 100px; /* 100px down from the top */
             left: 100px; /* 100px right from the left */
         }
+
+        img {
+            width: 1000px; /* Image width */
+            height: auto; /* Maintain aspect ratio */
+            position: absolute; /* Position absolute to place it relative to the body */
+            top: 100px; /* 100px down from the top */
+            left: 100px; /* 100px right from the left */
+        }
     </style>
 </head>
 <body>
 
     <div class="rectangle"></div> <!-- Rectangle element -->
+    <img src="1.story.png" alt="Story Image"> <!-- Image element -->
 
 </body>
 </html>
