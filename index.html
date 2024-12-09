@@ -28,12 +28,22 @@
             top: 100px; /* 100px down from the top */
             left: 100px; /* 100px right from the left */
         }
+
+        .overlapping-image {
+            width: 300px; /* Width of the overlapping image */
+            height: auto; /* Maintain aspect ratio */
+            position: absolute; /* Position absolute */
+            top: 20px; /* 20px from the top */
+            right: 20px; /* 20px from the right */
+            z-index: 10; /* Higher z-index to ensure it overlaps */
+        }
     </style>
 </head>
 <body>
 
     <div class="rectangle"></div> <!-- Rectangle element -->
     <img src="1.story.png" alt="Story Image"> <!-- Image element -->
+    <img class="overlapping-image" src="overlap-image.png" alt="Overlapping Image"> <!-- Overlapping Image -->
 
 </body>
 </html>
