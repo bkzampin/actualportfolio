@@ -32,8 +32,8 @@
             width: 400px; /* Set width to 400px */
             max-height: 80%; /* Relative height; adjust as needed */
             overflow-y: auto; /* Allow scrolling if the content exceeds max-height */
-           margin-left: 50px;
-            margin-top: 500px; /* Move the text column down by 400px */
+            margin-left: 50px;
+            margin-top: 500px; /* Move the text column down by 500px */
             font-family: "komet", sans-serif; /* Apply the Komet font */
             font-weight: 400; /* Set font weight */
             font-style: normal; /* Set font style */
@@ -57,19 +57,95 @@
             right: 20px; /* Adjust from the right */
             z-index: 10; /* Higher z-index to ensure it overlaps */
         }
+
+        /* Styles for the slideshow */
+        .slideshow-container {
+            position: absolute; /* Position absolute */
+            top: 50px; /* Align with the top of the rectangle */
+            right: 20px; /* Adjust from the right */
+            width: 500px; /* Set width to 500px */
+            height: auto; /* Relative height */
+            overflow: hidden; /* Hide overflow */
+            border: 2px solid #dbdddc; /* Optional: border around the slideshow */
+            border-radius: 10px; /* Optional: rounded corners */
+          margin-right:150px 
+        }
+
+        .mySlides {
+            display: none; /* Hide all images by default */
+            width: 100%; /* Full width */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        /* Navigation buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%; /* Center vertically */
+            width: auto;
+            padding: 16px;
+            color: #dbdddc; /* Button text color */
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease; /* Transition effect */
+            border: none; /* No border */
+            user-select: none; /* Prevent text selection */
+        }
+
+        .next {
+            right: 0; /* Position to the right */
+        }
+
+        .prev {
+            left: 0; /* Position to the left */
+        }
     </style>
 </head>
 <body>
 
     <div class="rectangle"> <!-- Rectangle element -->
         <div class="text-column">
-            <p>I chose to present this story as sketchbook entries because it reflects my passion for art; creating it as a visual sketchbook-diary adds a personal, meaningful touch to the story I’m sharing. It begins in 2010, when I was 5 - fast-forwards to the present day as I navigate school, facing challenges of self-doubt and creative block. By the end of the story, I had rediscovered my passion for art and learned to appreciate the process of creation itself, rather than focusing solely on the result. All illustrations were hand-drawn in Procreate. For some sections, I used Firefly for reference photos. I used them to create my own drawings in my style!
-</p>
+            <p>I chose to present this story as sketchbook entries because it reflects my passion for art; creating it as a visual sketchbook-diary adds a personal, meaningful touch to the story I’m sharing. It begins in 2010, when I was 5 - fast-forwards to the present day as I navigate school, facing challenges of self-doubt and creative block. By the end of the story, I had rediscovered my passion for art and learned to appreciate the process of creation itself, rather than focusing solely on the result. All illustrations were hand-drawn in Procreate. For some sections, I used Firefly for reference photos. I used them to create my own drawings in my style!</p>
         </div>
     </div>
     
     <img class="story-image" src="1.story1.png" alt="Story Image"> <!-- Main Image -->
     <img class="overlapping-image" src="storyimage.png" alt="Overlapping Image"> <!-- Overlapping Image -->
+
+    <div class="slideshow-container"> <!-- Slideshow Container -->
+        <img class="mySlides" src="frontcover.png" alt="Image 1">
+        <img class="mySlides" src="story1.png" alt="Image 2">
+        <img class="mySlides" src="image3.jpg" alt="Image 3">
+        <img class="mySlides" src="image4.jpg" alt="Image 4">
+        <img class="mySlides" src="image5.jpg" alt="Image 5">
+        <img class="mySlides" src="image6.jpg" alt="Image 6">
+        <img class="mySlides" src="image7.jpg" alt="Image 7">
+        <img class="mySlides" src="image8.jpg" alt="Image 8">
+        <img class="mySlides" src="image9.jpg" alt="Image 9">
+        <img class="mySlides" src="image10.jpg" alt="Image 10">
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) { slideIndex = 1 }    
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slides[slideIndex - 1].style.display = "block";  
+        }
+    </script>
 
 </body>
 </html>
