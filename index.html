@@ -59,46 +59,58 @@
         }
 
         /* Styles for the slideshow */
-        .slideshow-container {
-            position: absolute; /* Position absolute */
-            top: 50px; /* Align with the top of the rectangle */
-            right: 20px; /* Adjust from the right */
-            width: 500px; /* Set width to 500px */
-            height: auto; /* Relative height */
-            overflow: hidden; /* Hide overflow */
-            border: 2px solid #dbdddc; /* Optional: border around the slideshow */
-            border-radius: 10px; /* Optional: rounded corners */
-          margin-right:150px 
-        }
+        /* Styles for the slideshow */
+ .slideshow-container {
+    position: absolute; /* Position absolute */
+    top: 50px; /* Align with the top of the rectangle */
+    right: 110px; /* Adjust from the right */
+    width: 600px; /* Set width to 500px */
+    height: auto; /* Relative height */
+    overflow: hidden; /* Hide overflow */
+    border: 2px solid #dbdddc; /* Optional: border around the slideshow */
+    border-radius: 10px; /* Optional: rounded corners */
+    margin-right: 100px; /* Adjust margin as needed */
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+       background-color: #436a9f; /* Fill the container with black */
 
-        .mySlides {
-            display: none; /* Hide all images by default */
-            width: 100%; /* Full width */
-            height: auto; /* Maintain aspect ratio */
-        }
+}
 
-        /* Navigation buttons */
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%; /* Center vertically */
-            width: auto;
-            padding: 16px;
-            color: #dbdddc; /* Button text color */
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease; /* Transition effect */
-            border: none; /* No border */
-            user-select: none; /* Prevent text selection */
-        }
+.mySlides {
+    display: none; /* Hide all images by default */
+    width: 100%; /* Full width of the slideshow container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 500px; /* Set maximum width to 500px */
+    object-fit: contain; /* Ensure the image fits within the container */
+}
+       .custom-width {
+        width: 300px; /* Set the desired width */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: contain; /* Ensure the image fits within the container */
+    }
+    /* Navigation buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute; /* Position absolute */
+    top: 10px; /* Position near the top */
+    width: auto;
+    padding: 16px;
+    color: #dbdddc; /* Button text color */
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease; /* Transition effect */
+    border: none; /* No border */
+    user-select: none; /* Prevent text selection */
+}
 
-        .next {
-            right: 0; /* Position to the right */
-        }
+.prev {
+    left: 10px; /* Position at the left */
+}
 
-        .prev {
-            left: 0; /* Position to the left */
-        }
+.next {
+    right: 10px; /* Position at the right */
+}
     </style>
 </head>
 <body>
@@ -112,20 +124,19 @@
     <img class="story-image" src="1.story1.png" alt="Story Image"> <!-- Main Image -->
     <img class="overlapping-image" src="storyimage.png" alt="Overlapping Image"> <!-- Overlapping Image -->
 
-    <div class="slideshow-container"> <!-- Slideshow Container -->
-        <img class="mySlides" src="frontcover.png" alt="Image 1">
-        <img class="mySlides" src="story1.png" alt="Image 2">
-        <img class="mySlides" src="story3.png" alt="Image 3">
-        <img class="mySlides" src="story4.png" alt="Image 4">
-        <img class="mySlides" src="story5.png" alt="Image 5">
-        <img class="mySlides" src="story6.png" alt="Image 6">
-        <img class="mySlides" src="story7.png" alt="Image 7">
-        <img class="mySlides" src="story8.png" alt="Image 8">
-        <img class="mySlides" src="story9.png" alt="Image 9">
-        <img class="mySlides" src="story10.png" alt="Image 10">
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
+<div class="slideshow-container"> <!-- Slideshow Container -->
+    <img class="mySlides" src="story1.png" alt="Image 2">
+    <img class="mySlides custom-width" src="story3.png" alt="Image 3"> <!-- Custom width applied here -->
+    <img class="mySlides custom-width" src="story4.png" alt="Image 4">
+    <img class="mySlides" src="story5.png" alt="Image 5">
+    <img class="mySlides" src="story6.png" alt="Image 6">
+    <img class="mySlides" src="story7.png" alt="Image 7">
+    <img class="mySlides" src="story8.png" alt="Image 8">
+    <img class="mySlides custom-width" src="story9.png" alt="Image 9">
+    <img class="mySlides" src="story10.png" alt="Image 10">
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
 
     <script>
         let slideIndex = 1;
